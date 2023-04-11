@@ -1,0 +1,181 @@
+
+
+    
+<div class="container" id="container">
+  
+  <div class="form-container sign-in-container">
+    <form action="/add1"  method="post" autocomplete="off">
+    <input type="hidden" name="id" value="{{user._id}}">
+
+
+      <h2>{{{titlesanpham}}} </h2>
+      
+      <input type="text" placeholder="Mã Sản Phẩm" name="masp" value="{{user.masp}}" />
+       <input type="text" placeholder="Tên Sản Phẩm"   name="tensp" value="{{user.tensp}}"/>
+      <input type="number" placeholder="Giá" name="dongia" value="{{user.dongia}}" />  
+        <input type="text"placeholder="Màu" name="mausac" value="{{user.mausac}}" >
+              <input type="text" placeholder="Loại" name="loaisp" value="{{user.loaisp}}" >
+  <input type="file" name="hinhanh" value="{{user.hinhanh}}" required>
+
+
+    
+     <button  type="submit" class="a1">Thêm</button>
+     <a href="/huyaddproduct" class="a2">Hủy</a>
+   
+    </form>
+  </div>
+  
+  </div>
+</div>
+
+
+<style>
+    
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing: border-box;
+}
+.a1{
+   border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+.a1:active {
+  transform: scale(0.95);
+}
+
+.a1:focus {
+  outline: none;
+}
+
+.a1.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+.a2{
+  margin-top: 10px;
+   border-radius: 20px;
+  border: 1px solid #e5ff00;
+  background-color: #ceff2b;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+.a2:active {
+  transform: scale(0.95);
+}
+
+.a2:focus {
+  outline: none;
+}
+
+.a2.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+body {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  margin: -20px 0 50px;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0;
+}
+
+{{!-- button {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #FFFFFF;
+} --}}
+
+form {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 580px;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+</style>

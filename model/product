@@ -1,0 +1,33 @@
+const mongoose = require('mongoose');
+
+const ListProduct = new mongoose.Schema({
+
+    masp:{ 
+        type: String,
+        required: true,
+    },
+    tensp:{ 
+        type: String,
+        required: true,
+    },
+    dongia:{ 
+        type: String,
+        required: true,
+    },
+    mausac:{ 
+        type: String,
+        required: true,
+    },
+    loaisp:{ 
+        type: String,
+        required: true,
+    },
+    hinhanh:{ 
+        type: String
+    },
+
+
+})
+
+const List = new mongoose.model("ListProduct",ListProduct);
+module.exports = List;
